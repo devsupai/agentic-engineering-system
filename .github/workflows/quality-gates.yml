@@ -1,0 +1,33 @@
+name: Agentic Engineering System - Quality Gates
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  quality-gates:
+    name: Run Quality Gates & Anti-Slop Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Quality Gate Orchestrator
+        run: |
+          node scripts/run-quality-gate.js .
+
+      - name: Verify Bundle Metrics
+        run: |
+          node scripts/check-bundle-metrics.js .
+
+      - name: Check Content Integrity (Zero Emojis & Fake Claims)
+        run: |
+          node scripts/check-content-integrity.js .
