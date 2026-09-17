@@ -1,66 +1,82 @@
 # Agentic Engineering System (AES)
 
-> **Système d'ingénierie logicielle modulaire, préventif et standardisé pour agents IA (Claude Code, Cursor, Codex, Antigravity, Aider, Copilot).**
+> **Système de gouvernance logicielle, Quality Gates déterministes, Anti-Slop et SEO pour agents IA de code.**  
+> Support natif pour **Claude Code**, **Cursor**, **Codex**, **Antigravity**, **Aider** et **Copilot**.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-green.svg)](https://nodejs.org/)
-[![Quality Gates](https://img.shields.io/badge/Quality%20Gates-Continuous-blueviolet.svg)](#quality-gates)
-[![Rigueur Épistémique](https://img.shields.io/badge/Epistémologie-Stricte-orange.svg)](#métrologie-épistémique)
+[![Zéro Dépendance](https://img.shields.io/badge/D%C3%A9pendances-0-brightgreen.svg)](#faq)
+[![SEO & AEO](https://img.shields.io/badge/SEO%20%26%20AEO-Automatis%C3%A9-purple.svg)](#pilier-2-moteur-seo--moteurs-ia-aeo)
 
 [**🇬🇧 Read Documentation in English**](README.md)
 
 ---
 
-## 1. Pourquoi ce système existe-t-il ?
+## ⚡ En Bref : Ce que résout AES
 
-Sans structure stricte, les directives données aux agents de code deviennent un énorme prompt monolithique accumulant pêle-mêle des principes universels, des contraintes de stack et des données métier.
+Livrée à elle-même, une IA de code génère du **« slop »** : elle invente de faux avis clients, des pourcentages marketing fantaisistes (*« +45% de conversion ! »*), massacre la structure SEO (trois balises `<h1>` par page, balises canoniques oubliées) et déclare *"Tout est 100% accessible et parfait !"* sans avoir mesuré la moindre ligne.
 
-Cette dérive provoque :
-1. **La contamination de contexte :** Un agent invente des données d'un ancien projet sur un nouveau dépôt.
-2. **Le « Slop » IA :** L'agent invente des faux avis clients, des faux prix, des pourcentages arbitraires (*« +40% de conversion »*) ou prétend que le code est *« 100% accessible »*.
-3. **Les rapports complaisants :** L'agent conclut que *« Tout est parfait »* sans exécuter de véritables tests ni calculer les tailles de bundle.
-
-**AES résout ce problème** grâce à :
-* **La Règle des 5 Couches :** Découplage strict entre Global, Compétences, Projet, Stack et Faits Métier.
-* **La Rigueur Épistémique :** 4 statuts stricts (`MESURÉ`, `NON MESURÉ`, `ESTIMÉ`, `QUALITATIF`). Zéro calcul mental par l'agent.
-* **Des Quality Gates Outillées :** Des scripts Node.js sans aucune dépendance externe pour valider le code de façon déterministe.
-
----
-
-## 2. La Règle des 5 Couches
+**AES installe des garde-fous stricts, une infrastructure SEO/AEO automatisée et des Quality Gates déterministes dans vos sessions de développement IA.**
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│ 1. GLOBAL (rules/global-principles.md)                      │
-│    Principes universels pour 100% des projets. Agnostique.  │
-├─────────────────────────────────────────────────────────────┤
-│ 2. PROCÉDURES & SKILLS (skills/* ou fonctions d'agent)      │
-│    Procédures opérationnelles spécialisées réutilisables.   │
-├─────────────────────────────────────────────────────────────┤
-│ 3. PROJECT (project.config.json & directives locales)       │
-│    Identité du projet, langues actives, seuils des gates.   │
-├─────────────────────────────────────────────────────────────┤
-│ 4. STACK (rules/stack-*.md)                                 │
-│    Contraintes technologiques (framework, routeur, bundler).│
-├─────────────────────────────────────────────────────────────┤
-│ 5. FAITS (businessFacts dans project.config.json)           │
-│    Données factuelles réelles (prix, mentions, cas réels).  │
-└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          IA PAR DÉFAUT vs. IA AVEC AES                  │
+├──────────────────────────┬──────────────────────────────────────────────┤
+│ ❌ Sans AES              │ ✅ Avec AES                                  │
+├──────────────────────────┼──────────────────────────────────────────────┤
+│ Prompt monolithique 800l │ Architecture découplée en 5 couches          │
+│ Faux prix et fausses stats│ Zéro fake data, faits réels vérifiés        │
+│ SEO cassé, multiples H1  │ 1 seul H1, hiérarchie séquentielle, llms.txt│
+│ Tailles bundle inventées │ Calcul exact du gzip (zéro calcul mental)    │
+│ Fausse promesse WCAG AA  │ Statut épistémique honnête (MESURÉ/NON MESURÉ)│
+│ Rapport PASS aveugle     │ PASS WITH WARNINGS obligatoire si alertes    │
+└──────────────────────────┴──────────────────────────────────────────────┘
 ```
 
 ---
 
-## 3. Démarrage Rapide en 60 Secondes
+## 🏛️ Les 4 Piliers Fondamentaux
 
-### Étape 1 : Initialiser dans votre projet
+### Pilier 1 : La Règle des 5 Couches (Zéro Contamination)
+Empêche l'agent d'accumuler un prompt géant et d'halluciner des données d'un projet sur un autre :
+1. **GLOBAL (`rules/global-principles.md`)** : Éthique universelle d'ingénierie pour 100% des projets.
+2. **PROCÉDURES (`scripts/`)** : Scripts de vérification déterministes réutilisables.
+3. **PROJET (`project.config.json`)** : Carte d'identité du dépôt (nom, domaine, langues, seuils).
+4. **STACK (`rules/stack-*.md`)** : Contraintes de framework et bundler (React, Next.js, Vite...).
+5. **FAITS (`businessFacts`)** : Données réelles prouvées (tarifs, mentions légales, cas concrets).
+
+### Pilier 2 : Moteur SEO & Moteurs IA (AEO)
+Des scripts intégrés garantissent une indexation optimale par les moteurs classiques et les moteurs IA :
+* **Hiérarchie des titres :** Exactement **un `<h1>` unique par page** et arborescence strictement séquentielle (`<h1>` ➔ `<h2>` ➔ `<h3>`). Audité par `check-headings.js`.
+* **Canoniques absolues :** Balise `<link rel="canonical">` absolue sur chaque page pour éliminer le duplicate content.
+* **Sitemap & Robots :** Contrôle des URLs absolues dans `sitemap.xml` et directive Sitemap dans `robots.txt`.
+* **Standard `llms.txt` :** Validation du format Markdown structuré indispensable aux crawlers IA (Perplexity, SearchGPT, Claude).
+
+### Pilier 3 : Rigueur Épistémique & Anti-Slop
+* **4 statuts exclusifs :** Chaque constat doit être qualifié (`MESURÉ`, `NON MESURÉ`, `ESTIMÉ`, `QUALITATIF`).
+* **Zéro calcul mental :** Les métriques dérivées (sommes, moyennes de bundles) sont calculées par `check-bundle-metrics.js`.
+* **Zéro emoji en production :** Emojis bannis dans le code et les interfaces ; icônes vectorielles SVG obligatoires.
+
+### Pilier 4 : Quality Gates Déterministes (Zéro Dépendance)
+Des utilitaires en pur Node.js qui s'exécutent en moins de 300ms sans installer le moindre paquet npm :
+* `check-bundle-metrics.js` : Calcul physique exact brut et gzip (HTML, CSS, JS).
+* `check-headings.js` : Audit séquentiel des balises de titres.
+* `check-a11y-images.js` : Attributs alt, dimensions explicites (anti-CLS), formats modernes.
+* `check-content-integrity.js` : Détecteur anti-slop (emojis, fausses promesses chiffrées).
+* `check-seo-canonical-llms.js` : Contrôle SEO technique, sitemap, robots et `llms.txt`.
+* `self-check-report.js` : Auto-contrôle de cohérence interne des rapports générés par l'IA.
+
+---
+
+## 🚀 Démarrage Rapide (60 Secondes)
+
+### 1. Initialiser AES dans votre projet
 ```bash
-# Dans votre projet existant ou nouveau dossier :
 npx aes init
 ```
+*Génère `project.config.json` et `rules/global-principles.md`.*
 
-### Étape 2 : Exporter les directives pour votre agent IA
-Générez les fichiers d'instructions adaptés à votre outil favori depuis la source unique de vérité :
-
+### 2. Exporter les règles pour votre agent IA
 ```bash
 # Pour Claude Code (génère CLAUDE.md)
 npx aes export --target claude
@@ -78,60 +94,61 @@ npx aes export --target aider
 npx aes export --target all
 ```
 
-### Étape 3 : Exécuter les Quality Gates
+### 3. Exécuter les Quality Gates
 ```bash
 npx aes gate
 ```
 
----
-
-## 4. Métrologie Épistémique & Les 4 Statuts
-
-Chaque résultat ou métrique doit être classé sans ambiguïté :
-* **`MESURÉ`** : Donnée issue d'un script exécuté en local (ex: `Total bundle gzip: 89.17 kB`).
-* **`NON MESURÉ`** : Métrique réelle non mesurée en local (ex: Core Web Vitals en conditions réelles sans outil RUM).
-* **`ESTIMÉ`** : Calcul projectif explicitement annoncé comme une estimation.
-* **`QUALITATIF`** : Remarque issue d'une revue de code, ne constituant pas une mesure physique.
-
-### Tableau de Synthèse Standardisé
-
-L'agent présente ses conclusions dans un tableau standardisé avec preuve tangible :
-
+Génère le tableau de preuves standardisé :
+```markdown
 | Gate | Statut | Preuve |
 | :--- | :---: | :--- |
-| **`web-seo (headings)`** | **PASS** | 1 H1 unique vérifié, 0 saut de niveau (8 fichiers HTML) |
-| **`web-accessibility`** | **PASS** | Contrôles automatisés réussis pour critères testés (12 images avec alt conforme) |
-| **`content-quality`** | **PASS** | 0 emoji, 0 allégation fictive (12 fichiers scannés) |
-| **`web-seo (infrastructure)`** | **PASS** | Canonical: PASS \| Sitemap: PASS \| Robots: PASS \| llms.txt: PASS |
-| **`web-performance (bundle)`** | **PASS** | HTML gzip: 3.8 kB \| CSS gzip: 11.2 kB \| JS gzip: 78.4 kB \| Total: 93.4 kB (MESURÉ) |
-| **`web-performance (runtime CWV)`**| **NON MESURÉ**| LCP, INP, CLS non mesurés en local (audit instrumenté requis) |
-| **`web-i18n`** | **N/A** | Projet monolingue |
-| **`web-security`** | **N/A** | Aucun backend ni base de données |
+| web-seo (headings) | **PASS** | 1 H1 unique vérifié, hiérarchie séquentielle (8 fichiers HTML) |
+| web-accessibility | **PASS** | Contrôles automatisés réussis pour critères testés (12 images avec alt) |
+| content-quality | **PASS** | 0 emoji, 0 allégation fictive (12 fichiers scannés) |
+| web-seo (infrastructure) | **PASS** | Canonical: PASS | Sitemap: PASS | Robots: PASS | llms.txt: PASS |
+| web-performance (bundle) | **PASS** | HTML gzip: 3.8 kB | CSS gzip: 11.2 kB | JS gzip: 78.4 kB | Total: 93.4 kB (MESURÉ) |
+| web-performance (runtime CWV) | **NON MESURÉ** | LCP, INP, CLS non mesurés en local (audit instrumenté requis) |
+| web-i18n | **N/A** | Projet monolingue |
+| web-security | **N/A** | Aucun backend ni base de données |
+```
 
 ---
 
-## 5. Scripts de Validation Déterministes
+## 🤖 Plateformes d'IA Supportées
 
-Le dossier `scripts/` contient des utilitaires Node.js ultra-rapides et sans dépendance :
-
-| Script | Fonction |
-| :--- | :--- |
-| `scripts/run-quality-gate.js` | Orchestrateur complet des Quality Gates. |
-| `scripts/check-bundle-metrics.js` | Calcul automatique exact des tailles physiques brutes et gzip. |
-| `scripts/check-headings.js` | Vérificateur d'unicité H1 et d'arborescence séquentielle. |
-| `scripts/check-a11y-images.js` | Audit des attributs alt, dimensions et formats d'images. |
-| `scripts/check-content-integrity.js`| Détecteur d'emojis et motifs statistiques suspects (anti-slop). |
-| `scripts/check-seo-canonical-llms.js`| Contrôle canonicals absolues, sitemap, robots et llms.txt. |
-| `scripts/self-check-report.js` | Contrôle de cohérence interne des rapports générés par l'IA. |
+| Outil | Commande d'export | Fichier(s) généré(s) |
+| :--- | :--- | :--- |
+| **Claude Code & Projects** | `npx aes export --target claude` | `CLAUDE.md` |
+| **Cursor IDE** | `npx aes export --target cursor` | `.cursor/rules/global-principles.mdc` & `stack-rules.mdc` |
+| **Google Antigravity & Gemini** | `npx aes export --target gemini` | `GEMINI.md` |
+| **Aider CLI** | `npx aes export --target aider` | `CONVENTIONS.md` |
+| **GitHub Copilot** | `npx aes export --target copilot` | `.github/copilot-instructions.md` |
+| **OpenAI Codex / Assistants** | *System instructions* | Voir [Guide Codex](docs/adapters/codex.md) |
 
 ---
 
-## 6. Intégration CI/CD GitHub Actions
+## ❓ FAQ
 
-Un workflow prêt à l'emploi est disponible dans `.github/workflows/quality-gates.yml` pour valider chaque PR et commit.
+**Q : Est-ce qu'il faut installer des paquets lourds ?**  
+Non. Tous les scripts utilisent **0 dépendance npm** (pur Node.js natif : `fs`, `path`, `zlib`). L'exécution est quasi-instantanée.
+
+**Q : Est-ce compatible avec mon framework ?**  
+Oui. Le système fonctionne avec React, Next.js, Vite, Astro, Vue, Svelte ou du simple HTML/JS. Les contraintes spécifiques sont isolées dans `rules/stack-*.md`.
+
+**Q : À quoi sert le fichier `llms.txt` ?**  
+C'est le standard émergent qui permet aux moteurs IA (SearchGPT, Perplexity, Claude) d'indexer et comprendre votre site sans halluciner. AES vérifie sa validité automatiquement.
+
+---
+
+## 📚 Documentation Détaillée
+
+* [Architecture : La Règle des 5 Couches](docs/architecture.fr.md)
+* [Quality Gates & Métrologie Épistémique](docs/quality-gates.md)
+* [Spécification Architecturale (Anglais)](docs/architecture.md)
 
 ---
 
 ## Licence
 
-MIT © 2026 DevSupAi & Contributeurs. Libre d'utilisation personnelle et commerciale.
+MIT © 2026 DevSupAi & Contributeurs. Libre pour usage personnel et commercial.

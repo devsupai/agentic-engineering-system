@@ -1,69 +1,82 @@
 # Agentic Engineering System (AES)
 
-> **Modular, Epistemic, and Automated Software Governance for AI Coding Agents.**  
+> **The Epistemic Quality Gate, Anti-Slop & SEO Governance Framework for AI Coding Agents.**  
 > Native support for **Claude Code**, **Cursor**, **Codex**, **Antigravity**, **Aider**, and **Copilot**.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-green.svg)](https://nodejs.org/)
-[![Quality Gates](https://img.shields.io/badge/Quality%20Gates-Continuous-blueviolet.svg)](#quality-gates)
-[![Epistemic Rigor](https://img.shields.io/badge/Epistemics-Strict-orange.svg)](#epistemic-metrology)
+[![Zero Dependencies](https://img.shields.io/badge/Dependencies-0-brightgreen.svg)](#faq)
+[![SEO & AEO](https://img.shields.io/badge/SEO%20%26%20AEO-Automated-purple.svg)](#pillar-3-automated-seo--ai-search-aeo)
 
 [**🇫🇷 Lire la documentation en Français**](README.fr.md)
 
 ---
 
-## 1. Why AES Exists
+## ⚡ In a Nutshell: What AES Does
 
-When developers build software with autonomous AI coding agents, they quickly run into three critical bottlenecks:
+When left unguided, AI coding agents produce **slop**: they invent fake customer reviews, make up arbitrary marketing numbers (*"+45% conversion!"*), break heading hierarchies (multiple `<h1>`s), forget canonical links, and claim *"Everything is 100% accessible and ready!"* without measuring anything.
 
-1. **The Prompt Bloat & Context Rot Trap:** All instructions, business facts, and stack quirks get dumped into a single monolithic file (`CLAUDE.md`, `.cursorrules`). Agents get overwhelmed, selectively forget rules, or hallucinate Project A's data into Project B.
-2. **AI Slop & Fabricated Data:** By default, LLMs invent commercial claims, fake user testimonials, arbitrary statistics (*"+40% conversion rate"*), and claim *"100% WCAG AA compliant"* without running accessibility tools.
-3. **Complaisant Hallucinated Reports:** Agents announce *"All gates passed! Ready for production!"* based on mental estimates and blind optimism without executing real verification scripts.
-
-**AES solves this** by introducing:
-* **The 5-Layer Rule:** A clean, decoupled hierarchy separating universal principles from stack constraints and business facts.
-* **Epistemic Metrology:** A non-negotiable classification separating measured physical data (`MEASURED`) from unmeasured real-world metrics (`UNMEASURED`).
-* **Deterministic Quality Gates:** Fast, zero-dependency Node.js scripts that calculate exact bundle sizes, enforce sequential heading hierarchies, audit image accessibility, and self-check audit reports.
-
----
-
-## 2. The 5-Layer Architecture
+**AES installs strict guardrails, automated SEO/AEO pipelines, and deterministic quality gates into your AI coding workflows.**
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│ 1. GLOBAL (rules/global-principles.md)                      │
-│    Universal principles for 100% of projects. Tool-agnostic.│
-├─────────────────────────────────────────────────────────────┤
-│ 2. PROCEDURES & SKILLS (skills/* or tool functions)         │
-│    Specialized, on-demand operational workflows.            │
-├─────────────────────────────────────────────────────────────┤
-│ 3. PROJECT (project.config.json & agent instructions)       │
-│    Repository identity, active locales, and gate thresholds.│
-├─────────────────────────────────────────────────────────────┤
-│ 4. STACK (rules/stack-*.md)                                 │
-│    Framework, router, bundler, and architecture conventions.│
-├─────────────────────────────────────────────────────────────┤
-│ 5. FACTS (businessFacts in project.config.json)             │
-│    Verified human data (real pricing, legal terms, cases).  │
-└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────┐
+│                        DEFAULT AI vs. AI WITH AES                       │
+├──────────────────────────┬──────────────────────────────────────────────┤
+│ ❌ Without AES           │ ✅ With AES                                  │
+├──────────────────────────┼──────────────────────────────────────────────┤
+│ Monolithic 800-line prompt│ Clean 5-Layer decoupled architecture         │
+│ Invented pricing & stats │ Zero fake data; facts strictly enforced     │
+│ Messy SEO, multiple H1s  │ 1 unique H1, sequential headings, llms.txt   │
+│ Hallucinated bundle sizes│ Exact gzip bundle calculation (0 mental math)│
+│ "100% WCAG AA" fake claim│ Honest epistemic status (MEASURED / UNMEASURED)│
+│ Blind PASS release reports│ PASS WITH WARNINGS required if warnings exist│
+└──────────────────────────┴──────────────────────────────────────────────┘
 ```
 
 ---
 
-## 3. Quick Start in 60 Seconds
+## 🏛️ The 4 Core Pillars
 
-### Step 1: Initialize in your project
+### Pillar 1: The 5-Layer Rule (No Context Pollution)
+Prevents prompt bloat and prevents an agent from hallucinating data across different projects:
+1. **GLOBAL (`rules/global-principles.md`)**: Tool-agnostic engineering ethics for 100% of projects.
+2. **PROCEDURES (`scripts/`)**: Reusable deterministic verification scripts.
+3. **PROJECT (`project.config.json`)**: Repository identity, domain, active languages, and gate thresholds.
+4. **STACK (`rules/stack-*.md`)**: Framework, routing, and bundler constraints (React, Next.js, etc.).
+5. **FACTS (`businessFacts`)**: Real verified business data (prices, legal notice, case studies).
+
+### Pillar 2: Automated SEO & AI Search Engine Optimization (AEO)
+Built-in scripts ensure your generated code is 100% crawlable by both traditional search engines and AI engines:
+* **Headings Hierarchy:** Exactly **one `<h1>` per page** and strictly sequential order (`<h1>` ➔ `<h2>` ➔ `<h3>`). Checked via `check-headings.js`.
+* **Canonical URLs:** Absolute canonical tags on every HTML page to eliminate duplicate content penalties.
+* **Sitemap & Robots:** Validates absolute URLs in `sitemap.xml` and checks the sitemap directive in `robots.txt`.
+* **`llms.txt` Standard:** Formats and validates the clean Markdown roadmap required by modern AI search crawlers (Perplexity, SearchGPT, Claude).
+
+### Pillar 3: Epistemic Metrology & Anti-Slop
+* **Strict 4-tier status:** Findings must be tagged as `MEASURED` (verified by script), `UNMEASURED` (real-world CWV requiring field tools), `ESTIMATED`, or `QUALITATIVE`.
+* **Zero mental math:** Derived metrics (bundle sums, averages) are calculated automatically by `check-bundle-metrics.js`.
+* **Zero Unicode emojis:** Emojis are banned in production code and UI; SVG icons are required.
+
+### Pillar 4: Deterministic Zero-Dependency Quality Gates
+Pure Node.js scripts that run locally in under 300ms without installing a single npm package:
+* `check-bundle-metrics.js`: Exact byte & gzip calculations for HTML, CSS, JS.
+* `check-headings.js`: Sequential heading audit.
+* `check-a11y-images.js`: Alt attributes, explicit dimensions (CLS prevention), modern formats.
+* `check-content-integrity.js`: Detects emojis and unverified marketing multiplier claims.
+* `check-seo-canonical-llms.js`: Full SEO, sitemap, robots, and `llms.txt` audit.
+* `self-check-report.js`: Enforces report integrity (verdict consistency, factual proofs).
+
+---
+
+## 🚀 Quickstart (60 Seconds)
+
+### 1. Initialize AES in your project
 ```bash
-# In your existing repository or new project:
 npx aes init
 ```
-This generates:
-* `project.config.json`: The single factual identity card of your project.
-* `rules/global-principles.md`: The universal agent principles.
+*Creates `project.config.json` and `rules/global-principles.md`.*
 
-### Step 2: Export adapter for your agent
-Generate platform-specific instruction files from your single source of truth:
-
+### 2. Export instructions for your AI agent
 ```bash
 # For Claude Code (creates CLAUDE.md)
 npx aes export --target claude
@@ -81,96 +94,56 @@ npx aes export --target aider
 npx aes export --target all
 ```
 
-### Step 3: Run Continuous Quality Gates
+### 3. Run Quality Gates
 ```bash
-# Run the complete test suite:
 npx aes gate
-
-# Or use npm scripts:
-npm run gate
 ```
 
----
-
-## 4. Epistemic Metrology & The 4 Statuses
-
-AES forbids agents from approximating physical metrics or claiming unverified compliance. Every finding must be explicitly tagged:
-
-* **`MEASURED`**: Produced by an executed script (e.g. `JS gzip: 89.17 kB`).
-* **`UNMEASURED`**: Impossible to measure locally (e.g. Core Web Vitals LCP/INP/CLS in local build without RUM/lab environment).
-* **`ESTIMATED`**: A projection explicitly announced as a theoretical estimate.
-* **`QUALITATIVE`**: Subjective code review observation, never a physical measurement.
-
-### Standard Quality Gate Proof Table
-
-Agents must output their release findings in a strict tabular format with tangible proof:
-
+Outputs the standard proof table:
+```markdown
 | Gate | Status | Proof |
 | :--- | :---: | :--- |
-| **`web-seo (headings)`** | **PASS** | 1 unique H1 verified, sequential hierarchy (8 HTML file(s)) |
-| **`web-accessibility`** | **PASS** | Automated checks passed for tested criteria (12 image(s) with valid alt) |
-| **`content-quality`** | **PASS** | 0 emojis, 0 unverified claims (12 file(s) scanned) |
-| **`web-seo (infrastructure)`** | **PASS** | Canonical: PASS \| Sitemap: PASS \| Robots: PASS \| llms.txt: PASS |
-| **`web-performance (bundle)`** | **PASS** | HTML gzip: 3.8 kB \| CSS gzip: 11.2 kB \| JS gzip: 78.4 kB \| Total bundle gzip: 93.4 kB (MEASURED) |
-| **`web-performance (runtime CWV)`**| **UNMEASURED** | LCP, INP, CLS not measured locally (requires lab/RUM instrumentation) |
-| **`web-i18n`** | **N/A** | Monolingual project |
-| **`web-security`** | **N/A** | No dedicated backend or database |
-
----
-
-## 5. Built-in Deterministic Verification Scripts
-
-The `scripts/` directory contains zero-dependency, ultra-fast Node.js scripts:
-
-| Script | Purpose |
-| :--- | :--- |
-| `scripts/run-quality-gate.js` | Full Quality Gate orchestrator and proof table builder. |
-| `scripts/check-bundle-metrics.js` | Calculates exact raw and gzip sizes for HTML, CSS, and JS (zero mental math). |
-| `scripts/check-headings.js` | Enforces single H1 per page and strictly sequential heading hierarchy (H1 ➔ H2 ➔ H3). |
-| `scripts/check-a11y-images.js` | Audits image alt attributes, modern format adoption, and explicit width/height dimensions. |
-| `scripts/check-content-integrity.js`| Anti-slop engine: detects Unicode emojis in code and flags unverified multiplier claims. |
-| `scripts/check-seo-canonical-llms.js`| Validates canonical tags, sitemap.xml, robots.txt, and AI crawler format (`llms.txt`). |
-| `scripts/self-check-report.js` | Auto-validates audit reports: ensures no contradictions (e.g. PASS when warnings exist). |
-
----
-
-## 6. GitHub Actions CI/CD Integration
-
-AES includes an automated CI workflow in `.github/workflows/quality-gates.yml`:
-
-```yaml
-name: Quality Gates
-on: [push, pull_request]
-jobs:
-  audit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: '20' }
-      - run: node scripts/run-quality-gate.js .
-      - run: node scripts/check-bundle-metrics.js .
-      - run: node scripts/check-content-integrity.js .
+| web-seo (headings) | **PASS** | 1 unique H1 verified, sequential hierarchy (8 HTML file(s)) |
+| web-accessibility | **PASS** | Automated checks passed for tested criteria (12 image(s) with valid alt) |
+| content-quality | **PASS** | 0 emojis, 0 unverified claims (12 file(s) scanned) |
+| web-seo (infrastructure) | **PASS** | Canonical: PASS | Sitemap: PASS | Robots: PASS | llms.txt: PASS |
+| web-performance (bundle) | **PASS** | HTML gzip: 3.8 kB | CSS gzip: 11.2 kB | JS gzip: 78.4 kB | Total: 93.4 kB (MEASURED) |
+| web-performance (runtime CWV) | **UNMEASURED** | LCP, INP, CLS not measured locally (requires lab/RUM instrumentation) |
+| web-i18n | **N/A** | Monolingual project |
+| web-security | **N/A** | No dedicated backend or database |
 ```
 
 ---
 
-## 7. Supported AI Platforms
+## 🤖 Supported AI Coding Platforms
 
-| Platform | Integration Method | Documentation |
+| Tool | Export Command | Generated File(s) |
 | :--- | :--- | :--- |
-| **Claude Code & Projects** | `CLAUDE.md` + CLI Terminal tool calls | [Claude Guide](docs/adapters/claude.md) |
-| **Cursor IDE** | `.cursor/rules/*.mdc` (multi-rule globs) | [Cursor Guide](docs/adapters/cursor.md) |
-| **OpenAI Codex & Assistants**| System prompt + Tool/Function Calling | [Codex Guide](docs/adapters/codex.md) |
-| **Google Antigravity & Gemini**| `GEMINI.md` + Custom Skills | [Antigravity Guide](docs/adapters/antigravity.md) |
-| **Aider** | `CONVENTIONS.md` | `npx aes export --target aider` |
-| **GitHub Copilot** | `.github/copilot-instructions.md` | `npx aes export --target copilot` |
+| **Claude Code & Projects** | `npx aes export --target claude` | `CLAUDE.md` |
+| **Cursor IDE** | `npx aes export --target cursor` | `.cursor/rules/global-principles.mdc` & `stack-rules.mdc` |
+| **Google Antigravity & Gemini** | `npx aes export --target gemini` | `GEMINI.md` |
+| **Aider CLI** | `npx aes export --target aider` | `CONVENTIONS.md` |
+| **GitHub Copilot** | `npx aes export --target copilot` | `.github/copilot-instructions.md` |
+| **OpenAI Codex / Assistants** | *System instructions* | See [Codex Guide](docs/adapters/codex.md) |
 
 ---
 
-## 8. Documentation
+## ❓ FAQ
 
-* [Architecture: The 5-Layer System](docs/architecture.md)
+**Q: Does it install heavy dependencies?**  
+No. All validation scripts use **0 external npm dependencies** (pure Node.js built-ins: `fs`, `path`, `zlib`). Execution is instantaneous.
+
+**Q: Is it tied to a specific framework?**  
+No. It works with React, Next.js, Vite, Astro, Vue, Svelte, or plain HTML/JS. Stack-specific rules are isolated in `rules/stack-*.md`.
+
+**Q: What is `llms.txt`?**  
+It is the emerging web standard allowing AI search engines (SearchGPT, Perplexity, Claude) to read and index your site without hallucinating. AES automatically validates its structure.
+
+---
+
+## 📚 In-Depth Documentation
+
+* [Architecture: The 5-Layer Rule](docs/architecture.md)
 * [Quality Gates & Epistemic Metrology](docs/quality-gates.md)
 * [Spécification Architecturale (Français)](docs/architecture.fr.md)
 
