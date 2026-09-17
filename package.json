@@ -1,0 +1,43 @@
+{
+  "name": "agentic-engineering-system",
+  "version": "1.0.0",
+  "description": "Modular, epistemic, and automated software engineering framework for AI coding agents (Claude Code, Cursor, Codex, Antigravity)",
+  "main": "bin/aes.js",
+  "bin": {
+    "aes": "./bin/aes.js"
+  },
+  "scripts": {
+    "test": "node scripts/run-quality-gate.js .",
+    "gate": "node scripts/run-quality-gate.js",
+    "gate:bundle": "node scripts/check-bundle-metrics.js",
+    "gate:headings": "node scripts/check-headings.js",
+    "gate:a11y": "node scripts/check-a11y-images.js",
+    "gate:content": "node scripts/check-content-integrity.js",
+    "gate:seo": "node scripts/check-seo-canonical-llms.js",
+    "check:report": "node scripts/self-check-report.js",
+    "export": "node scripts/export-adapters.js",
+    "export:claude": "node scripts/export-adapters.js --target claude",
+    "export:cursor": "node scripts/export-adapters.js --target cursor",
+    "export:gemini": "node scripts/export-adapters.js --target gemini",
+    "export:aider": "node scripts/export-adapters.js --target aider",
+    "export:copilot": "node scripts/export-adapters.js --target copilot",
+    "export:all": "node scripts/export-adapters.js --target all"
+  },
+  "keywords": [
+    "ai-agents",
+    "claude-code",
+    "cursor",
+    "codex",
+    "antigravity",
+    "quality-gates",
+    "epistemic-rigor",
+    "anti-slop",
+    "prompt-engineering",
+    "software-engineering"
+  ],
+  "author": "DevSupAi",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

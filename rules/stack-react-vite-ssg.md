@@ -1,0 +1,34 @@
+# Stack Rules: React 19 + Vite + SSG / SPA
+
+These rules govern projects built with React 19, Vite, and Static Site Generation (SSG) or client-side routing.
+
+---
+
+## 1. Build & Compilation Constraints
+
+* **Modern Bundling:** Use Vite with ESM (`vite build`).
+* **Route Pre-rendering:** When SSG is enabled, all public routes must be pre-rendered to HTML to guarantee crawlability and rich preview generation without JavaScript execution.
+* **TypeScript Strictness:** Strict mode enabled (`strict: true`). Zero `any` types without written justification.
+
+---
+
+## 2. Routing & Navigation
+
+* **React Router v7 / TanStack Router:**
+  * Active links must use `aria-current="page"` (never `aria-pressed`).
+  * Scroll restoration must be active on route transitions.
+* **404 / Fallback Handling:** A static 404 page must be generated during build.
+
+---
+
+## 3. SEO & Structured Data in React
+
+* **Helmet / Meta Management:** Use `@unhead/react`, `react-helmet-async`, or native SSG meta injection to ensure meta tags and JSON-LD schemas exist in the initial static HTML, not merely injected via client-side DOM mutation.
+* **One H1 per view:** Every rendered page component must have exactly one `<h1>`.
+
+---
+
+## 4. Assets & Bundles
+
+* **Image Pipeline:** Prefer modern formats (`.webp`, `.svg`). Images must declare explicit `width` and `height` or `aspect-ratio` CSS to avoid layout shifts.
+* **Dynamic Imports:** Code-split non-critical routes and large vendor libraries using `React.lazy()` or Vite dynamic imports.

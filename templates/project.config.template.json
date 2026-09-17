@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "project": {
+    "name": "MyProject",
+    "description": "Factual description of the project without invented marketing buzzwords",
+    "version": "1.0.0",
+    "domain": "https://example.com",
+    "primaryLanguage": "en",
+    "languages": ["en"],
+    "isMultilingual": false,
+    "environment": "production"
+  },
+  "stack": {
+    "framework": "react",
+    "bundler": "vite",
+    "rendering": "ssg",
+    "cssFramework": "tailwind",
+    "rulesFile": "rules/stack-react-vite-ssg.md"
+  },
+  "qualityGates": {
+    "distDir": "dist",
+    "maxBundleSizeBytes": 350000,
+    "enforceSequentialHeadings": true,
+    "enforceImageAlt": true,
+    "enforceNoEmojis": true,
+    "enforceNoFakeStats": true,
+    "enforceCanonical": true,
+    "enforceLlmsTxt": true
+  },
+  "businessFacts": {
+    "companyName": "Example Corp",
+    "contactEmail": "contact@example.com",
+    "legalNoticeUrl": "/legal",
+    "pricingTiers": []
+  }
+}
